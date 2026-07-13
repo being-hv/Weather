@@ -1,72 +1,76 @@
 <!doctype html>
 <html lang="en">
-  <head>
+
+<head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Weather Dashboard</title>
     <link rel="stylesheet" href="styles.css" />
     <script type="module" src="dashboard.js" defer></script>
-  </head>
-  <body class="page-shell dashboard-shell">
+</head>
+
+<body class="page-shell dashboard-shell">
     <main class="dashboard-app" aria-labelledby="dashboard-title">
-      <header class="topbar">
-        <div>
-          <p class="eyebrow">Live Weather</p>
-          <h1 id="dashboard-title">Weather Vault Dashboard</h1>
-          <p class="lede">Search any city and explore current conditions plus a 3-day outlook.</p>
-        </div>
-
-        <button class="ghost-button" id="logout-button" type="button">Log out</button>
-      </header>
-
-      <section class="search-panel" aria-label="City search">
-        <form id="search-form" class="search-form" novalidate>
-          <label class="sr-only" for="city-search">Search city</label>
-          <input id="city-search" name="city-search" type="search" placeholder="Search a city like Nairobi or Toronto" autocomplete="off" required />
-          <button type="submit" class="primary-button">Search</button>
-        </form>
-        <p class="form-message" id="search-message" role="alert" aria-live="polite"></p>
-      </section>
-
-      <section class="weather-grid">
-        <article class="hero-card weather-card" id="current-weather" aria-live="polite">
-          <div class="card-header">
-            <p class="card-kicker">Current Conditions</p>
-            <p class="weather-chip" id="weather-state">Awaiting search</p>
-          </div>
-          <div class="weather-main">
+        <header class="topbar">
             <div>
-              <h2 id="location-name">Choose a city</h2>
-              <p class="location-meta" id="location-meta">Your results will appear here.</p>
+                <p class="eyebrow">Live Weather</p>
+                <h1 id="dashboard-title">Weather Vault Dashboard</h1>
+                <p class="lede">Search any city and explore current conditions plus a 3-day outlook.</p>
             </div>
-            <div class="temperature-block">
-              <span id="current-temp">--°</span>
-              <p id="weather-description">Search to load the forecast.</p>
-            </div>
-          </div>
-          <dl class="stats-grid">
-            <div>
-              <dt>Humidity</dt>
-              <dd id="humidity">--%</dd>
-            </div>
-            <div>
-              <dt>Wind</dt>
-              <dd id="wind-speed">-- km/h</dd>
-            </div>
-            <div>
-              <dt>High / Low</dt>
-              <dd id="high-low">-- / --</dd>
-            </div>
-          </dl>
-        </article>
 
-        <aside class="forecast-card weather-card">
-          <div class="card-header">
-            <p class="card-kicker">3-Day Forecast</p>
-          </div>
-          <div id="forecast-list" class="forecast-list" aria-live="polite"></div>
-        </aside>
-      </section>
+            <button class="ghost-button" id="logout-button" type="button">Log out</button>
+        </header>
+
+        <section class="search-panel" aria-label="City search">
+            <form id="search-form" class="search-form" novalidate>
+                <label class="sr-only" for="city-search">Search city</label>
+                <input id="city-search" name="city-search" type="search"
+                    placeholder="Search a city like Nairobi or Toronto" autocomplete="off" required />
+                <button type="submit" class="primary-button">Search</button>
+            </form>
+            <p class="form-message" id="search-message" role="alert" aria-live="polite"></p>
+        </section>
+
+        <section class="weather-grid">
+            <article class="hero-card weather-card" id="current-weather" aria-live="polite">
+                <div class="card-header">
+                    <p class="card-kicker">Current Conditions</p>
+                    <p class="weather-chip" id="weather-state">Awaiting search</p>
+                </div>
+                <div class="weather-main">
+                    <div>
+                        <h2 id="location-name">Choose a city</h2>
+                        <p class="location-meta" id="location-meta">Your results will appear here.</p>
+                    </div>
+                    <div class="temperature-block">
+                        <span id="current-temp">--°</span>
+                        <p id="weather-description">Search to load the forecast.</p>
+                    </div>
+                </div>
+                <dl class="stats-grid">
+                    <div>
+                        <dt>Humidity</dt>
+                        <dd id="humidity">--%</dd>
+                    </div>
+                    <div>
+                        <dt>Wind</dt>
+                        <dd id="wind-speed">-- km/h</dd>
+                    </div>
+                    <div>
+                        <dt>High / Low</dt>
+                        <dd id="high-low">-- / --</dd>
+                    </div>
+                </dl>
+            </article>
+
+            <aside class="forecast-card weather-card">
+                <div class="card-header">
+                    <p class="card-kicker">3-Day Forecast</p>
+                </div>
+                <div id="forecast-list" class="forecast-list" aria-live="polite"></div>
+            </aside>
+        </section>
     </main>
-  </body>
+</body>
+
 </html>

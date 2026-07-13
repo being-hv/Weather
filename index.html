@@ -1,32 +1,37 @@
 <!doctype html>
 <html lang="en">
-  <head>
+
+<head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Weather Login</title>
     <link rel="stylesheet" href="styles.css" />
     <script type="module" src="auth.js" defer></script>
-  </head>
-  <body class="page-shell login-shell">
+</head>
+
+<body class="page-shell login-shell">
     <main class="auth-card" aria-labelledby="login-title">
-      <section class="brand-panel">
-        <p class="eyebrow">Course Project</p>
-        <h1 id="login-title">Weather Vault</h1>
-        <p class="lede">Sign in to unlock a city search dashboard with live weather, a 3-day forecast, and a shifting atmospheric backdrop.</p>
-      </section>
+        <section class="brand-panel">
+            <p class="eyebrow">Course Project</p>
+            <h1 id="login-title">Weather Vault</h1>
+            <p class="lede">Sign in to unlock a city search dashboard with live weather, a 3-day forecast, and a
+                shifting atmospheric backdrop.</p>
+        </section>
 
-      <form class="auth-form" id="login-form" novalidate>
-        <label for="username">Username</label>
-        <input id="username" name="username" type="text" autocomplete="username" required placeholder="admin" />
+        <form class="auth-form" id="login-form" novalidate>
+            <label for="username">Username</label>
+            <input id="username" name="username" type="text" autocomplete="username" required placeholder="admin" />
 
-        <label for="password">Password</label>
-        <input id="password" name="password" type="password" autocomplete="current-password" required placeholder="password123" />
+            <label for="password">Password</label>
+            <input id="password" name="password" type="password" autocomplete="current-password" required
+                placeholder="password123" />
 
-        <p class="form-message" id="login-message" role="alert" aria-live="polite"></p>
+            <p class="form-message" id="login-message" role="alert" aria-live="polite"></p>
 
-        <button type="submit" class="primary-button">Sign In</button>
-        <p class="hint">Test users: <span>admin / password123</span> or <span>student / jsbasiç2026</span></p>
-      </form>
+            <button type="submit" class="primary-button">Sign In</button>
+            <p class="hint">Test users: <span>admin / password123</span> or <span>student / jsbasiç2026</span></p>
+        </form>
     </main>
-  </body>
+</body>
+
 </html>
