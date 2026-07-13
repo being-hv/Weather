@@ -1,67 +1,206 @@
-# Weather Vault
+# 🌦️ Weather Vault
 
-A sleek, minimally dark weather experience that starts with a real login gate and opens into a live city dashboard. Users sign in through a local JSON database, search for a city, and get current conditions, a 3-day forecast, and a weather-responsive background that shifts with the forecast.
+> A sleek, dark-themed weather application with authentication, live weather data, and dynamic backgrounds that respond to real-time forecast conditions.
 
-## Preview
+![HTML](https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white)
+![CSS](https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white)
+![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black)
+![Open-Meteo](https://img.shields.io/badge/API-Open--Meteo-0099FF?style=for-the-badge)
 
-Weather Vault is designed to feel calm, focused, and polished. The interface leans into deep neutrals, soft glass panels, and bright weather accents so the data stands out without losing the dark aesthetic.
+---
 
-## What It Does
+## ✨ Overview
 
-- Validates login credentials by fetching local data from `users.json`
-- Redirects authenticated users from `index.html` to `dashboard.html`
-- Fetches live geocoding and forecast data from Open-Meteo
-- Shows current weather, humidity, wind, and high/low values
-- Renders a 3-day forecast using template-driven DOM updates
-- Changes the page background to match the weather state: sunny, cloudy, rainy, snowy, or stormy
+**Weather Vault** delivers a clean and immersive weather experience with a secure login flow, live weather updates, and a responsive interface that adapts to current weather conditions.
 
-## Tech Stack
+Users authenticate through a local JSON-based credential store before accessing a dashboard that displays:
 
-- HTML5 for semantic structure
-- CSS3 for responsive layout, glassmorphism-style cards, and atmosphere-driven theming
-- Vanilla JavaScript for DOM handling, async fetch requests, and conditional UI updates
-- Local JSON data for login validation
-- Open-Meteo APIs for live weather and forecast data
+- 🌡️ Current weather
+- 💧 Humidity
+- 💨 Wind speed
+- 📈 High & Low temperatures
+- 📅 3-Day Forecast
+- 🎨 Dynamic weather-based backgrounds
 
-## Project Structure
+Built entirely with **HTML, CSS, and Vanilla JavaScript**, the project focuses on modern UI design while demonstrating asynchronous API integration and DOM manipulation.
 
-- `index.html` - login screen
-- `dashboard.html` - weather dashboard
-- `auth.js` - credential validation and redirect logic
-- `dashboard.js` - weather fetch, render, and background state handling
-- `styles.css` - shared design system and responsive styling
-- `users.json` - local credential store used by the login screen
+---
 
-## How To Run
+## 📸 Preview
 
-This project must be served from a local web server because the login flow uses `fetch()` to read `users.json`.
+> *Add screenshots here*
 
-1. Open a terminal in the project folder.
-2. Start a local server:
+| Login | Dashboard |
+|-------|-----------|
+| ![](assets/login-preview.png) | ![](assets/dashboard-preview.png) |
+
+---
+
+# 🚀 Features
+
+- 🔐 Local authentication using `users.json`
+- ➜ Automatic redirect after successful login
+- 🌍 City search with Open-Meteo Geocoding API
+- ☀️ Live weather conditions
+- 📅 3-Day weather forecast
+- 💨 Wind speed display
+- 💧 Humidity information
+- 📈 Daily High & Low temperatures
+- 🎨 Dynamic backgrounds based on weather conditions
+- 📱 Fully responsive layout
+- ✨ Glassmorphism-inspired dark UI
+
+---
+
+# 🛠 Tech Stack
+
+| Technology | Purpose |
+|------------|---------|
+| HTML5 | Semantic page structure |
+| CSS3 | Styling, responsiveness & glassmorphism |
+| Vanilla JavaScript | Application logic & DOM manipulation |
+| Open-Meteo API | Weather & Geocoding data |
+| JSON | Local authentication database |
+
+---
+
+# 📂 Project Structure
+
+```text
+Weather-Vault/
+│
+├── index.html          # Login page
+├── dashboard.html      # Weather dashboard
+├── styles.css          # Shared styling
+├── auth.js             # Login authentication
+├── dashboard.js        # Weather logic
+├── users.json          # Local user database
+├── .gitignore
+└── README.md
+```
+
+---
+
+# ⚙️ Getting Started
+
+## 1. Clone the repository
+
+```bash
+git clone https://github.com/yourusername/weather-vault.git
+```
+
+## 2. Navigate into the project
+
+```bash
+cd weather-vault
+```
+
+## 3. Start a local server
+
+Because the application loads `users.json` using `fetch()`, it **must** be served from a local web server.
+
+Using Python:
 
 ```bash
 python3 -m http.server 8000
 ```
 
-3. Open the app in your browser:
+Or:
+
+```bash
+python -m http.server 8000
+```
+
+---
+
+## 4. Open the application
+
+Visit:
 
 ```text
 http://localhost:8000
 ```
 
-## Test Accounts
+---
 
-Use one of the following credential pairs:
+# 🔑 Test Accounts
 
-- `admin / password123`
-- `student / jsbasiç2026`
+| Username | Password |
+|----------|----------|
+| `admin` | `password123` |
+| `student` | `jsbasiç2026` |
 
-## Submission Notes
+---
 
-- The app includes a `.gitignore` for local and editor noise.
-- The repository is already initialized and ready for GitHub submission.
-- The Git history contains multiple meaningful commits that reflect the build process.
+# 🌐 APIs Used
 
-## Why This Project Stands Out
+## Open-Meteo Geocoding API
 
-This is not just a static weather card. It starts with authentication, uses fetched local data for login validation, and then turns the dashboard into a living interface that reacts to real forecast conditions. The result is a compact project that still demonstrates HTML structure, CSS design, JavaScript state handling, and API integration in one clean flow.
+Used to convert city names into geographic coordinates.
+
+```
+https://geocoding-api.open-meteo.com/
+```
+
+## Open-Meteo Forecast API
+
+Used to retrieve live weather conditions and forecast data.
+
+```
+https://api.open-meteo.com/
+```
+
+---
+
+# 🎨 UI Highlights
+
+- Minimal dark interface
+- Glassmorphism cards
+- Dynamic weather backgrounds
+- Smooth transitions
+- Responsive layout
+- Modern typography
+- Weather-driven visual experience
+
+---
+
+# 💡 Learning Outcomes
+
+This project demonstrates:
+
+- Authentication using local JSON data
+- Working with the Fetch API
+- Asynchronous JavaScript (`async/await`)
+- REST API integration
+- DOM manipulation
+- Conditional rendering
+- Responsive web design
+- Dynamic UI updates based on application state
+
+---
+
+# 🚧 Future Improvements
+
+- 🔒 Password hashing
+- 👤 User registration
+- ⭐ Favorite cities
+- 📍 Current location support
+- 🌅 Sunrise & Sunset data
+- 🌧 Hourly forecast
+- 🌡 Temperature unit toggle (°C / °F)
+- 🌙 Dark & Light theme switch
+- 📊 Weather charts
+
+---
+
+# 📄 License
+
+This project is intended for educational and portfolio purposes.
+
+---
+
+## 👨‍💻 Author
+
+**Harshvardhanam**
+
+If you found this project helpful, consider giving it a ⭐ on GitHub.
