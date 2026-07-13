@@ -26,16 +26,6 @@ Built entirely with **HTML, CSS, and Vanilla JavaScript**, the project focuses o
 
 ---
 
-## 📸 Preview
-
-> *Add screenshots here*
-
-| Login | Dashboard |
-|-------|-----------|
-| ![](assets/login-preview.png) | ![](assets/dashboard-preview.png) |
-
----
-
 # 🚀 Features
 
 - 🔐 Local authentication using `users.json`
